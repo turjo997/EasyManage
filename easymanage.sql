@@ -67,6 +67,25 @@ CREATE TABLE [dbo].[Transaction]
    [Status] NVARCHAR(50) not null
 )
 
+CREATE TABLE [dbo].[Invoice]
+(
+   [ID] INT IDENTITY(1,1) primary key,
+   [UserID] INT not null foreign key references Users(UserID) ,
+   [Date] DATETIME(),
+   [Totalbill] Double null 
+)
+
+
+CREATE TABLE [dbo].[Order1]
+(
+   [ID] INT IDENTITY(1,1) primary key,
+   [InvoiceID] INT not null foreign key references Invoice(ID) ,
+   [ProductID] INT not null foreign key references Products(ProductID),
+   [O_Date]  DATETIME() ,
+   [Quantity] SMALLINT not null,
+   [O_bill] Double null ,
+   [O_UnitPrice] int null
+)
 
 
 
