@@ -1,0 +1,48 @@
+﻿@model EasyManage.Models.ManageProduct
+
+@{
+    ViewBag.Title = "ManageProduct";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ManageProduct</h2>
+
+<section>
+    <div class="row">
+
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem  text-center">
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/category.jpg" asp-append-version="true">
+
+
+                <div class="card-body">
+
+                    <h4 class="card-title">Product Category</h4>
+
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="https://localhost:44370/ProductTypes">Add Product Type</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem text-center">
+
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/add.jpg" asp-append-version="true">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">Products</h4>
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="https://localhost:44370/Products/Add">Add Products</a>
+                </div>
+
+            </div>
+        </div>
+
+  
+
+    </div >
+</section>

@@ -1,0 +1,52 @@
+﻿@model EasyManage.Models.Product
+@{
+    ViewBag.Title = "Adtocart";
+    Layout = "~/Views/Shared/custom2.cshtml";
+}
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<br />
+<br />
+<br />
+<div style="background-color:coral;">
+    @using (@Html.BeginForm())
+    {<div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img style="min-height:200px; width:200px;" src="@Url.Content(Model.productImage)" />
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <h1>Product Name: @Model.ProductName</h1>
+                    <h2>Price: @Model.ProductPrice Taka</h2>
+                    <h6>Description: @Model.ProductDetails</h6>
+                    <input type="number" name="qty" value="0" id="qty1" min="1" max="10" />
+                    <input type="submit" value="Submit" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,134 @@
+﻿@model EasyManage.Models.Admin
+
+@{
+
+    //  ViewBag.Title = "Dashboard";
+
+    Layout = "~/Views/Shared/adminDashboard.cshtml";
+    var admins = ViewBag.Admins;
+}
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<h2>Dashboard</h2>
+
+<!--<div>
+    <h4>Admin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminEmail)-->
+@*</dt>*@
+
+<!--<dd>
+            @Html.DisplayFor(model => model.AdminEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdminID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>-->
+
+<section>
+    <div class="row">
+
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem  text-center">
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/users.png" asp-append-version="true">
+
+
+                <div class="card-body">
+
+                    <h4 class="card-title">Registered Users</h4>
+
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="https://localhost:44370/Users/Index">View Users</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem text-center">
+
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/products.jpeg" asp-append-version="true">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">Products</h4>
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="https://localhost:44370/Admins/ManageProduct">Manage Products</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem text-center">
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/orders-history.png" asp-append-version="true">
+                <div class="card-body">
+
+                    <h4 class="card-title">Orders History</h4>
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="/Admins/Orders">View Orders</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 d-block d-lg-flex">
+
+            <div class="card  width: 18rem text-center">
+                <img style="width: 330px" class='card-img-top' alt="card-image" height="200" src="~/Content/images/enquiry.jpg" asp-append-version="true">
+                <div class="card-body">
+
+                    <h4 class="card-title">Users Queries/Feedback</h4>
+                    <a style="width:100%" class="btn btn-primary card-link stretched-link" href="https://localhost:44370/Contacts">View Queries</a>
+                </div>
+
+            </div>
+
+        </div>
+        <br><br>
+
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+@*<a href="@Url.Action("Login","Admins")">Logout</a>*@

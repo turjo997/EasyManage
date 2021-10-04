@@ -1,0 +1,68 @@
+﻿@model IEnumerable<EasyManage.Models.Product>
+
+
+@{
+
+    //Layout = "~/Views/Shared/custom1.cshtml";
+}
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="container-fluid">
+    <h2 class="text-center">Product List</h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4" style="border: 2px solid black">
+
+                <div style="text-align: center; border-bottom: 2px solid maroon">
+                    <h3>@item.ProductName</h3>
+                </div>
+                <div>
+                    <div class="col-md-8">
+                        @*width="150px" height="150px"*@
+                        <img src="@Url.Content(@item.productImage)" width="150px" height="150px" />
+                    </div>
+                    <div class="col-md-4" style="text-align: left">
+                        <b>@item.ProductDetails</b>
+                    </div>
+                </div>
+
+                <div class="col-md-8" style="font-size: 18px; border-top: 2px solid maroon; padding: 2px">
+                    <b>@item.ProductPrice.ToString("#,##0.00 Taka")</b>
+                </div>
+                <div class="col-md-4" style="text-align: right; margin-bottom: 10px; border-top: 2px solid maroon; padding: 2px">
+
+                    <h4 style="color:#808080; font-family:'Arial Rounded MT';text-align:center"> <span class="btn btn-warning">@Html.ActionLink("Add to Cart", "Login")</span></h4>
+
+
+                </div>
+
+
+            </div>
+
+        }
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

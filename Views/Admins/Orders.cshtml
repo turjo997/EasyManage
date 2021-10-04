@@ -1,0 +1,81 @@
+﻿@model IEnumerable<EasyManage.Models.Order1>
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+
+    <table class="table table-striped table-bordered table-hover table-success text-center">
+        <tr>
+            <th>
+                Order Date @*@Html.DisplayNameFor(model => model.O_Date)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                Order Bill @*@Html.DisplayNameFor(model => model.O_bill)*@
+            </th>
+            <th>
+                Unit Price @*@Html.DisplayNameFor(model => model.O_UnitPrice)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Invoice.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.ProductName)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.O_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.O_bill)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.O_UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Invoice.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+                    </td>*@
+            </tr>
+        }
+
+    </table>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

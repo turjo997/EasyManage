@@ -1,0 +1,97 @@
+﻿@model EasyManage.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+        </div>
+
+        <div class="col-lg-8">
+            <div>
+                <h4>User Details</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserEmail)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserEmail)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserPassword)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserPassword)
+                    </dd>
+
+                    @*<dt>
+                            @Html.DisplayNameFor(model => model.ConfirmPassword)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ConfirmPassword)
+                        </dd>*@
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserAddress)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserAddress)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserContact)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserContact)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
