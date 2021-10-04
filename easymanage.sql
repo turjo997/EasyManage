@@ -42,16 +42,6 @@ CREATE TABLE [dbo].[Products]
    [ProductDetails] TEXT null ,
    [ProductTypeId] INT not null foreign key references ProductTypes(ProductTypeID)
 )
-
-CREATE TABLE [dbo].[Orders]
-(
-   [OrderID] INT IDENTITY(1,1) primary key,
-   [UserID] INT not null foreign key references Users(UserID) ,
-   [ProductID] INT not null foreign key references Products(ProductID),
-   [Category] NVARCHAR(50) not null , 
-   [Quantity] SMALLINT not null
-)
-
 CREATE TABLE [dbo].[Transaction]
 (
    [ID] INT IDENTITY(1,1) primary key,
@@ -85,6 +75,15 @@ CREATE TABLE [dbo].[Order1]
    [Quantity] SMALLINT not null,
    [O_bill] Double null ,
    [O_UnitPrice] int null
+)
+
+CREATE TABLE [dbo].[Comments]
+(
+   [CommentId] INT IDENTITY(1,1) primary key,
+   [Comments] NVARCHAR(max)null , 
+   [ThisDateTime] datetime not null , 
+   [OrderId] int null,
+   [Rating] int null 
 )
 
 
